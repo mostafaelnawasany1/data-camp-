@@ -6,6 +6,7 @@ url: https://www.datacamp.com/courses/writing-efficient-python-code
 
 # 1. Foundations for efficiencies
 ## A taste of things to come
+#### nnn
 ```python
 # Print the list created using the Non-Pythonic approach
 i = 0
@@ -337,10 +338,10 @@ print(type_count, '\n')
 gen_count = Counter(generations)
 print(gen_count, '\n')
 
-# Use list comprehension to get each Pokémon's starting letter
+# Use list comprehension to get each PokÃ©mon's starting letter
 starting_letters = [name[:1] for name in names]
 
-# Collect the count of Pokémon for each starting_letter
+# Collect the count of PokÃ©mon for each starting_letter
 starting_letters_count = Counter(starting_letters)
 print(starting_letters_count)
 ```
@@ -350,7 +351,7 @@ print(starting_letters_count)
 # Import combinations from itertools
 from itertools import combinations
 
-# Create a combination object with pairs of Pokémon
+# Create a combination object with pairs of PokÃ©mon
 combos_obj = combinations(pokemon, 2)
 print(type(combos_obj), '\n')
 
@@ -358,7 +359,7 @@ print(type(combos_obj), '\n')
 combos_2 = [c for c in combos_obj]
 print(combos_2, '\n')
 
-# Collect all possible combinations of 4 Pokémon directly into a list
+# Collect all possible combinations of 4 PokÃ©mon directly into a list
 combos_4 = [c for c in combinations(pokemon, 4)]
 print(combos_4)
 ```
@@ -369,22 +370,22 @@ print(combos_4)
 ash_set = set(ash_pokedex)
 misty_set = set(misty_pokedex)
 
-# Find the Pokémon that exist in both sets
+# Find the PokÃ©mon that exist in both sets
 both = ash_set.intersection(misty_set)
 print(both)
 
-# Find the Pokémon that Ash has and Misty does not have
+# Find the PokÃ©mon that Ash has and Misty does not have
 ash_only = ash_set.difference(misty_set)
 print(ash_only)
 
-# Find the Pokémon that are in only one set (not both)
+# Find the PokÃ©mon that are in only one set (not both)
 unique_to_set = ash_set.symmetric_difference(misty_set)
 print(unique_to_set)
 ```
 
 ## Searching for Pokemon
 ```python
-# Convert Brock's Pokédex to a set
+# Convert Brock's PokÃ©dex to a set
 brock_pokedex_set = set(brock_pokedex)
 print(brock_pokedex_set)
 
@@ -399,11 +400,11 @@ print("Machop" in brock_pokedex_set)
 
 ## Gathering unique Pokemon
 ```python
-# Use find_unique_items() to collect unique Pokémon names
+# Use find_unique_items() to collect unique PokÃ©mon names
 uniq_names_func = find_unique_items(names)
 print(len(uniq_names_func))
 
-# Convert the names list to a set to collect unique Pokémon names
+# Convert the names list to a set to collect unique PokÃ©mon names
 uniq_names_set = set(names)
 print(len(uniq_names_set))
 
@@ -418,7 +419,7 @@ print(uniq_types, uniq_gens, sep='\n')
 
 ## Gathering Pokemon without a loop
 ```python
-# Collect Pokémon that belong to generation 1 or generation 2
+# Collect PokÃ©mon that belong to generation 1 or generation 2
 gen1_gen2_pokemon = [name for name,gen in zip(poke_names, poke_gens) if gen in [1, 2]]
 
 # Create a map object that stores the name lengths
@@ -446,7 +447,7 @@ print(poke_list_np == poke_list, '\n')
 print(poke_list_np[:3])
 print(poke_list[:3], '\n')
 top_3 = sorted(poke_list_np, key=lambda x: x[1], reverse=True)[:3]
-print('3 strongest Pokémon:\n{}'.format(top_3))
+print('3 strongest PokÃ©mon:\n{}'.format(top_3))
 ```
 
 ## One-time calculation loop
